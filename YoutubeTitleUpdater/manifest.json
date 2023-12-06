@@ -1,0 +1,20 @@
+{
+  "name": "Youtube Title Updater",
+  "description": "Updates the page titles for YouTube",
+  "version": "0.0",
+  "manifest_version": 3,
+
+  "permissions": [ ],
+  "background": {
+    "service_worker": "background.js",
+    "type":"module"
+  },
+  "action":{},
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["updater.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
