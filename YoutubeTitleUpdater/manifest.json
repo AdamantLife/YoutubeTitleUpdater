@@ -1,7 +1,7 @@
 {
   "name": "Youtube Title Updater",
   "description": "Updates the page titles for YouTube",
-  "version": "0.0",
+  "version": "1.0",
   "manifest_version": 3,
 
   "permissions": [ ],

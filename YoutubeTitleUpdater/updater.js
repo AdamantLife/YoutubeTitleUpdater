@@ -8,11 +8,14 @@ function checkURL() {
     }
 }
 
+// Being a dynamic webpage the elements required
+// to title the page may not be loaded yet
 function tryCheckURL(){
     try{
         checkURL();
     }
     catch(e){
+        // TODO: consider removing this
         console.log(e);
     }
 }
@@ -38,8 +41,7 @@ function updateTitle() {
     else if(type == "results") {
         tag = "Search Results";
     }
-    console.log(tag);
-    document.title = title.replace(/ - YouTube$.*/, " - YouTube" + tag ? " -" + tag: "");
+    document.title = title.replace(/ - YouTube$.*/, " - YouTube" + (tag ? " - " + tag: ""));
 }
 
 
